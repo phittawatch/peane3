@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Server Status Checker</title>
+</head>
+<body>
+
+  <h1>Server Status Checker</h1>
+
+  <button onclick="checkServerStatus()">Check Server Status</button>
+
+  <p id="status">Status: Not Checked</p>
+
+  <script>
+    function checkServerStatus() {
+      const serverUrl = 'https://jsonplaceholder.typicode.com';  // Replace with your server URL
+
+      document.getElementById('status').innerText = 'Checking...';
+
+      fetch(serverUrl, { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            document.getElementById('status').innerText = 'Status: Server is UP';
+          } else {
+            document.getElementById('status').innerText = 'Status: Server is DOWN';
+          }
+        })
+        .catch(error => {
+          document.getElementById('status').innerText = 'Status: Error - ' + error.message;
+        });
+    }
+  </script>
+
+</body>
+</html>
