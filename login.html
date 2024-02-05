@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: whitesmoke; /* Light grey background */
+    }
+
+    .logo{
+      width: 180px;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+
+    .login-container {
+      background-color: #E9E0EE; /* Purple */
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Add subtle box-shadow */
+      width: 300px;
+      text-align: center;
+      margin-top: 50;
+    }
+
+    .login-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: purple;
+      margin-bottom: 20px;
+    }
+
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    .login-button {
+      font-weight: bold;
+      width: 100%;
+      padding: 12px;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 8px;
+      background-color: purple; 
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 30;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-button:hover {
+      background-color: #EAEAEA;
+      color: purple; 
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <img src="pealogo-removebg.png" alt="Logo" class="logo">
+    <div class="login-title">Login PEA NE3</div>
+    <form action="login_process.php" method="post">
+      <input type="text" name="user_id_input" class="input-field" placeholder="รหัสพนักงาน" required minlength="6" maxlength="6"> 
+      <button type="submit" class="login-button">Login</button>
+    </form>
+  </div>
+
+  
+
+</body>
+</html>
