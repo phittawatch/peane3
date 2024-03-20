@@ -1,3 +1,10 @@
+<?php 
+    session_start();
+    include 'connect.php';
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -56,7 +63,7 @@
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
-                <li class="nav-item">
+            <li class="nav-item">
                     <a class="nav-link" href="MENU.php" target="_blank">
                         <i class="fas fa-fw fa-cog"></i>
                     <span>Switch Management</span>
@@ -67,6 +74,20 @@
                     <a class="nav-link" href="MENU.php" target="_blank">
                         <i class="fas fa-fw fa-building"></i>
                     <span>สถานีไฟฟ้า</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                    <a class="nav-link" href="tables.php" target="_blank">
+                        <i class="fas fa-file-alt fa-building"></i>
+                    <span>สัญญาอุปกรณ์</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                    <a class="nav-link" href="" target="_blank">
+                        <i class="fas fa-city fa-building"></i>
+                    <span>ผังอาคาร</span>
                 </a>
             </li>
 
@@ -92,23 +113,6 @@
                 </div>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseContract"
-                    aria-expanded="true" aria-controls="collapseContract">
-                    <i class="fas fa-fw fa-file-alt"></i>
-                    <span>สัญญาอุปกรณ์</span>
-                </a>
-                <div id="collapseContract" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">สัญญาอุปกรณ์:</h6>
-                        <a class="collapse-item" href="">ETC</a>
-                        <a class="collapse-item" href="">ETC</a>
-                        <a class="collapse-item" href="">ETC</a>
-                        <a class="collapse-item" href="">ETC</a>
-                    </div>
-                </div>
-            </li>
 
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseKlang"
@@ -128,7 +132,6 @@
                     </div>
                 </div>
             </li>
-
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
